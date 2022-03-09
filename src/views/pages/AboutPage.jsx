@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-export default class AboutPage extends Component(){
-      render(){
+import React from 'react';
+
+export default function AboutPage (){
             return(
                   <p>Page about...</p>
 
             )
-      }
+      
 }

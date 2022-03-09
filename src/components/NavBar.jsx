@@ -3,7 +3,12 @@ import React, {Component} from "react";
 export default class NavBar extends Component(){
      render(){
            return(
-                 <p>navbar...</p>
+            <div class="navbar">
+            <p className="title-navbar">Logo</p>
+          <div className="navbar-icons">
+            
+          </div>
+        </div>
            )
 
      }
