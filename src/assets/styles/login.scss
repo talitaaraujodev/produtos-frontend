@@ -1,0 +1,102 @@
+$white: #fff;
+$color-shadow: #f7f7f7;
+$bg-container: #fdfdfd;
+$color-h2: #373f41;
+$color-placeholder: #9c9c9c;
+$color-label: #525252;
+$bg-input: #fafafa;
+$bg-btn: #2cce95;
+
+@mixin box-shadow() {
+    box-shadow: 1px 2px 3px 3px $color-shadow;
+}
+@mixin box-shadow-for-mobile() {
+    box-shadow: 1px 2px 1px 2px $color-shadow;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: $bg-container;
+    background-image: url("../images/fundo.png");
+    background-repeat: no-repeat;
+}
+
+.form-container-login {
+    @extend .flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.content-login {
+    width: 400px;
+    height: 400px;
+    @include box-shadow();
+    @extend .flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background: #fff;
+    padding: 1rem;
+    h2 {
+        margin-top: 1.2rem;
+        color: $color-h2;
+    }
+    @media (max-width: 470px) {
+        width: 300px;
+        height: 300px;
+        @include box-shadow-for-mobile();
+    }
+}
+
+.input {
+    width: 100% !important;
+    height: 1.4rem !important;
+    padding: 1.3rem !important;
+    border: 0;
+    background: $bg-input;
+    border-radius: 1.1rem;
+    outline: none;
+    &::placeholder {
+        color: $color-placeholder;
+    }
+    @media (max-width: 470px) {
+        padding: 1rem;
+    }
+}
+
+.label {
+    color: $color-label;
+    font-size: 1.1rem;
+    @media (max-width: 470px) {
+        font-size: 1rem;
+    }
+}
+
+.btn-login {
+    color: $white;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 1.1rem;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border: 0;
+    background: $bg-btn;
+    transition: 0.1s;
+    @media (max-width: 470px) {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    &:hover{
+    background-image: linear-gradient(to right, #25e1a2, #38cf86, #27d17f, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(207, 226, 226, 0.9);
+    }
+}

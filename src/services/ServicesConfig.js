@@ -3,7 +3,7 @@ import utils from "../utils";
 import history from "../history";
 
 const baseApi = axios.create({
-  baseURL: process.env.REACT_APP_HEROKU ,
+  baseURL: process.env.REACT_APP_URL,
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",

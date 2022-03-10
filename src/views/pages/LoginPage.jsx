@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
 import loginService from "../../services/LoginService";
 import utils from "../../utils";
+import "../../assets/styles/login.scss"
+import { Link } from "react-router-dom";
 
 export default function LoginPage(props) {
 
@@ -17,7 +18,7 @@ export default function LoginPage(props) {
                   console.log(response.data);
                   if (response.data.token) {
                         utils.setToken(response.data.token);
-                        props.history.push("/produtos");
+                        props.history.push("/home");
                   }
             }).catch(erro => {
                   console.log(erro);
@@ -26,17 +27,16 @@ export default function LoginPage(props) {
       return (
             <div className="container-login">
                   <div className="form-container-login">
-                        <Form onSubmit={handleSubmit}>
-                              <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Digite seu email..." onChange={(e) => setEmail(e.target.value)} />
-                              </Form.Group>
-                              <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Digite seu password..." onChange={(e) => setPassword(e.target.value)} />
-                              </Form.Group>
-                        <Button variant="primary" type="submit">Enviar</Button>
-                        </Form>
+                        <div className="content-login">
+                              <h2>Login</h2>
+                              <form onSubmit={handleSubmit}>
+                                    <label className="label">Email</label>
+                                    <input type="email" placeholder="Digite seu email..." onChange={(e) => setEmail(e.target.value)} className="input" />
+                                    <label className="label">Senha</label>
+                                    <input type="password" placeholder="Digite seu password..." onChange={(e) => setPassword(e.target.value)} className="input" />
+                                    <button className="btn-login" type="submit">Enviar</button>
+                              </form>
+                        </div>
                   </div>
             </div>
       )
