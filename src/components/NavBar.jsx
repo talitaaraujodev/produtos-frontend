@@ -1,15 +1,9 @@
-import React, {Component} from "react";
-
-export default class NavBar extends Component(){
-     render(){
+import React from "react";
+import "../assets/styles/navbar.css";
+export default function NavBar (){
            return(
             <div class="navbar">
-            <p className="title-navbar">Logo</p>
-          <div className="navbar-icons">
-            
-          </div>
+        
         </div>
            )
-
-     }
 }

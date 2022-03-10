@@ -25,7 +25,7 @@ export default function LoginPage(props) {
       }
       return (
             <div className="container-login">
-                  <div className="container-main">
+                  <div className="form-container-login">
                         <Form onSubmit={handleSubmit}>
                               <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email</Form.Label>

@@ -1,14 +1,14 @@
 import React from "react";
 import NavBar from "../NavBar";
-import "../../assets/styles/global.css"
+import "../../assets/styles/global.css";
 
 export default function Layout(props) {
-    return (
-        <div className="container">
-            <div className="container-main">
-                <NavBar/>
-            </div>
-            <div className="content">{props.children}</div>
-        </div>
-    )
+  return (
+    <div class="container-layout">
+      <div class="container-main">
+  <NavBar/>
+        <div class="content">{props.children}</div>
+      </div>
+    </div>
+  );
 }
