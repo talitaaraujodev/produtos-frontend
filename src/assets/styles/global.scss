@@ -7,7 +7,7 @@
   font-family: 'Mulish', sans-serif;
 }
 .container-layout{
-  position: fixed;
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   width: 100%;

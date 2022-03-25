@@ -1,0 +1,50 @@
+@import "../../assets/styles/variables.scss";
+.nav {
+  width: 100%;
+  border-bottom: 1px solid #c9c9c9;
+  background-color: #fff !important;
+  justify-content: flex-end !important;
+}
+.navbar-brand {
+  font-weight: 700 !important;
+  font-size: 1.4rem !important;
+  color: $blue-dark !important;
+}
+.navbar-nav > a {
+  color: $black !important;
+  font-size: 1rem;
+  position: relative;
+}
+.navbar-nav a::after {
+  content: "";
+  position: absolute;
+  background-color: $green;
+  height: 3px;
+  left: 0;
+  width: 0;
+  bottom: 0;
+  border-radius: 1.1rem !important;
+  transition: all 0.4s ease;
+}
+.navbar-nav a:hover::after,
+.navbar-nav a:checked::after,
+.navbar-nav a:focus-visible::after {
+  width: 100%;
+}
+.navbar-toggler.collapsed {
+  border: 0;
+}
+
+.navbar-light.navbar-toggler {
+  border-color: 0 !important;
+}
+@media(max-width:990px){
+
+  .navbar-nav a::after {
+    content: none !important;
+ }
+ .navbar-nav a:hover{
+   color: $green!important;
+ }
+
+}
