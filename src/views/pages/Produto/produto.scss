@@ -1,0 +1,85 @@
+@import "../../../assets/styles/variables.scss";
+.container-produto {
+  width: 100%;
+}
+.col-category {
+  padding: 1rem;
+}
+.col-category h5 {
+  font-size: 1.5rem;
+  color: $blue-dark;
+  font-weight: bold;
+}
+.list-category li {
+  font-size: 1rem;
+}
+.list-category li:hover {
+  text-decoration: underline !important;
+  color: $green;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.col-table {
+  padding: 0.7rem;
+  margin-right: 0.7rem;
+  margin-top: 0.7rem;
+}
+.col-table-header h3 {
+  color: $blue-dark;
+  font-weight: bold;
+}
+
+.col-table thead {
+  background: $green;
+  color: $white;
+}
+.col-table tbody tr td img {
+  height: 125px;
+  width: 125px;
+  border-radius: 10px;
+}
+.list-category button {
+  border: 0;
+  padding: 0.4rem;
+  background-color: $green;
+  color: $white;
+  border-radius: 7px;
+  margin-top: 0.7rem;
+  width: 95px;
+  text-align: start !important;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.list-category button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.list-category button .icon-btn {
+  height: 1.2em;
+  width: 1.2em;
+}
+.col-table-header button {
+  background: #4db457;
+  border: 0;
+  padding: 0.4rem 0.5rem;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+.col-table-header button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.col-table-header h2 {
+  color: $blue-dark;
+  font-weight: 600;
+}
+.header-modal {
+  background-color: $green;
+}
+.title-modal {
+  color: $white;
+  font-weight: 600;
+}

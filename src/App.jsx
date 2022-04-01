@@ -1,9 +1,12 @@
-import React from "react";
-import Routes from "./Routes";
+import React, { lazy, Suspense } from "react";
+import Loader from "./components/Loader/Loader";
+const Routes = lazy(()=> import("./Routes"));
 const App = () => {
   return (
     <React.Fragment>
-      <Routes />
+      <Suspense fallback={<Loader />}>
+        <Routes />
+      </Suspense>
     </React.Fragment>
   );
 };

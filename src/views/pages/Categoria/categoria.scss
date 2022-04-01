@@ -1,0 +1,32 @@
+@import "../../../assets/styles/variables.scss";
+.container-categoria {
+  width: 100%;
+  padding: 1rem;
+}
+.container-categoria h2 {
+  font-weight: 600;
+  color: $blue-dark;
+  text-align: center;
+}
+.container-categoria thead {
+  background-color: $green;
+}
+.container-categoria thead tr th {
+  color: $white;
+}
+.table-header h2 {
+  font-size: 1.7rem;
+}
+.table-header button {
+  background: #4db457;
+  border: 0;
+  padding: 0.4rem 0.5rem;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+.table-header button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s;
+}

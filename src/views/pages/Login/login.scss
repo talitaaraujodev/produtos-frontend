@@ -48,8 +48,7 @@ $color-label: #525252;
     color: $dark;
   }
   @media (max-width: 470px) {
-    width: 350px;
-    height: 400px;
+    width: 300px;
     @include box-shadow-for-mobile();
   }
 }

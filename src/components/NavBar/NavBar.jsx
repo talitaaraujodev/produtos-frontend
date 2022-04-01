@@ -15,16 +15,16 @@ export default function NavBar() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ml-auto" navbarScroll >
-              <Nav.Link as={Link} to="/home">
+              <Nav.Link as={Link} to="/">
                 {"Home"}
               </Nav.Link>
               <Nav.Link as={Link} to="/about">
                 {"About"}
               </Nav.Link>
-              <Nav.Link as={Link} to="/home">
+              <Nav.Link as={Link} to="/produto">
                 {"Plantas"}
               </Nav.Link>
-              <Nav.Link as={Link} to="/home">
+              <Nav.Link as={Link} to="/categoria">
                 {"Categorias"}
               </Nav.Link>
             </Nav>

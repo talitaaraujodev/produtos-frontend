@@ -4,7 +4,8 @@ import utils from "../../../utils";
 import "./login.scss";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
+import Swal from "sweetalert2";
+window.Swal = Swal;
 export default function LoginPage(props) {
   const history = useHistory();
   const [email, setEmail] = useState();
@@ -22,10 +23,16 @@ export default function LoginPage(props) {
         if (response.data.token) {
           utils.setToken(response.data.token);
           history.push("/home");
+        
         }
       })
       .catch((erro) => {
         console.log(erro);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Credenciais inválidas.',
+        })
       });
   };
   return (
